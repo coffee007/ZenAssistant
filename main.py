@@ -1,16 +1,28 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+import pyttsx3
+import speech_recognition
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+def speak(text):
+    engine = pyttsx3.init()
+    engine.say(text)
+    engine.setProperty("rate", 150)
+    engine.runAndWait()
+
+for index, name in enumerate(speech_recognition.Microphone.list_microphone_names()):
+    print("Microphone with name \"{1}\" found for `Microphone(device_index={0})`".format(index, name))
+
+def get_audio():
+    r = speech_recognition.Recognizer()
+    with speech_recognition.Microphone() as source:
+        audio = r.listen(source)
+        said = ""
+        said = r.recognize_google(audio)
+        print(said)
+    return said
+
+text = get_audio()
+
+if "hello " in text:
+    print("sfsdfg")
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
