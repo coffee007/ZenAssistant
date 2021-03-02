@@ -8,16 +8,19 @@ def speak(text):
     engine.setProperty("rate", 150)
     engine.runAndWait()
 
-for index, name in enumerate(speech_recognition.Microphone.list_microphone_names()):
-    print("Microphone with name \"{1}\" found for `Microphone(device_index={0})`".format(index, name))
+
 
 def get_audio():
     r = speech_recognition.Recognizer()
     with speech_recognition.Microphone() as source:
-        audio = r.listen(source)
+        r.adjust_for_ambient_noise(source)
+        audio = r.listen(source, phrase_time_limit=3)
         said = ""
-        said = r.recognize_google(audio)
-        print(said)
+        try:
+            said = r.recognize_google(audio)
+            print(said)
+        except Exception as e:
+            print("end")
     return said
 
 text = get_audio()
