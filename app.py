@@ -6,6 +6,7 @@ from main import speak, get_audio
 from PyQt5.QtCore import QPropertyAnimation
 from PyQt5 import QtCore
 
+print("hello world")
 
 class UiMainWindow(QMainWindow):
     def __init__(self):
