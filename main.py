@@ -9,23 +9,14 @@ def speak(text):
     engine.runAndWait()
 
 
-
 def get_audio():
     r = speech_recognition.Recognizer()
     with speech_recognition.Microphone() as source:
         r.adjust_for_ambient_noise(source)
-        audio = r.listen(source, phrase_time_limit=3)
+        audio = r.listen(source)
         said = ""
         try:
             said = r.recognize_google(audio)
-            print(said)
         except Exception as e:
-            print("end")
+            said = ""
     return said
-
-text = get_audio()
-
-if "hello " in text:
-    print("sfsdfg")
-
-
