@@ -1,79 +1,63 @@
-from PyQt5 import QtCore, QtGui, QtWidgets
+import PyQt5.uic
+from PyQt5.QtWidgets import *
 from chatbot import chatbot
+import sys
+from main import speak, get_audio
+from PyQt5.QtCore import QPropertyAnimation
+from PyQt5 import QtCore
 
-class Ui_MainWindow(object):
-    def setupUi(self, MainWindow):
-        MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(766, 531)
-        MainWindow.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
-        self.centralwidget = QtWidgets.QWidget(MainWindow)
-        self.centralwidget.setObjectName("centralwidget")
-        self.introlabel = QtWidgets.QLabel(self.centralwidget)
-        self.introlabel.setGeometry(QtCore.QRect(110, 10, 571, 51))
-        font = QtGui.QFont()
-        font.setFamily("Georgia")
-        font.setPointSize(20)
-        font.setBold(True)
-        font.setWeight(75)
-        self.introlabel.setFont(font)
-        self.introlabel.setStyleSheet("color: black;\n"
-                                      "text-align: center;")
-        self.introlabel.setAlignment(QtCore.Qt.AlignCenter)
-        self.introlabel.setWordWrap(False)
-        self.introlabel.setObjectName("introlabel")
-        self.submit = QtWidgets.QPushButton(self.centralwidget)
-        self.submit.setGeometry(QtCore.QRect(340, 130, 101, 31))
-        self.submit.setObjectName("submit")
+
+class UiMainWindow(QMainWindow):
+    def __init__(self):
+        super(UiMainWindow, self).__init__()
+        PyQt5.uic.loadUi('mainui.ui', self)
+        self.talked = False
         self.submit.clicked.connect(self.onsend)
-        self.textinput = QtWidgets.QLineEdit(self.centralwidget)
-        self.textinput.setGeometry(QtCore.QRect(260, 70, 271, 51))
-        font = QtGui.QFont()
-        font.setFamily("Georgia")
-        font.setPointSize(11)
-        self.textinput.setFont(font)
-        self.textinput.setObjectName("textinput")
-        self.chatrec = QtWidgets.QTextEdit(self.centralwidget)
-        self.chatrec.setGeometry(QtCore.QRect(170, 180, 461, 361))
-        font = QtGui.QFont()
-        font.setFamily("Georgia")
-        font.setPointSize(14)
-        self.chatrec.setFont(font)
-        self.chatrec.setObjectName("chatrec")
-        MainWindow.setCentralWidget(self.centralwidget)
-        self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setEnabled(True)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 766, 21))
-        self.menubar.setAutoFillBackground(True)
-        self.menubar.setDefaultUp(False)
-        self.menubar.setObjectName("menubar")
-        MainWindow.setMenuBar(self.menubar)
-        self.statusbar = QtWidgets.QStatusBar(MainWindow)
-        self.statusbar.setObjectName("statusbar")
-        MainWindow.setStatusBar(self.statusbar)
+        self.voiceinput.clicked.connect(self.onvoice)
+        self.btn_toggle.clicked.connect(self.toggleclick)
+        self.sidemenu = False
 
-        self.retranslateUi(MainWindow)
-        QtCore.QMetaObject.connectSlotsByName(MainWindow)
-
-    def retranslateUi(self, MainWindow):
-        _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "EVA"))
-        self.introlabel.setText(_translate("MainWindow", "Hello, I\'m EVA, your virtual assistant!"))
-        self.submit.setWhatsThis(_translate("MainWindow", "Send your message to EVA"))
-        self.submit.setText(_translate("MainWindow", "Send!"))
-        self.textinput.setWhatsThis(_translate("MainWindow", "Enter your message here"))
-        self.menubar.setWhatsThis(_translate("MainWindow", "A virtual assistant"))
+    def talk(self, text):
+        if text == "" and self.talked:
+            self.chatrec.append('EVA: {}'.format(str("Sorry, I didn't get that. Please try again.")))
+            self.chatrec.repaint()
+            speak("Sorry, I didn't get that. Please try again.")
+            self.talked = False
+            return
+        elif text == "" and not self.talked:
+            return
+        self.chatrec.append("You: {}".format(text))
+        output = str(chatbot(text))
+        self.chatrec.append('EVA: {}'.format(output))
+        self.textinput.setText("")
+        self.chatrec.repaint()
+        speak(output)
 
     def onsend(self):
-        self.chatrec.append("You: {}".format(self.textinput.text()))
-        self.chatrec.append('EVA: {}'.format(str(chatbot(self.textinput.text()))))
-        self.textinput.setText("")
+        self.talk(self.textinput.text())
+
+    def onvoice(self):
+        userinput = get_audio()
+        self.talked = True
+        self.talk(userinput)
+
+    def toggleclick(self):
+        if self.sidemenu:
+            self.toggleMenu(False)
+        else:
+            self.toggleMenu(True)
+
+    def toggleMenu(self, enable):
+        if enable:
+            self.sidemenu = True
+            self.side_frame.setFixedWidth(250)
+        else:
+            self.sidemenu = False
+            self.side_frame.setFixedWidth(70)
 
 
 if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
-    MainWindow.show()
+    app = QApplication(sys.argv)
+    widget = UiMainWindow()
+    widget.show()
     sys.exit(app.exec_())
