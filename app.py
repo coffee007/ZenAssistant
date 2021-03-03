@@ -1,4 +1,4 @@
-from features import Assistant
+from Features import Assistant
 
 bot = Assistant("Zen")
 
