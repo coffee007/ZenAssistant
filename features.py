@@ -1,10 +1,13 @@
 from dadjoke import dadjoke
+import GoogleSearch
 
 
 class Assistant():
     def __init__(self, name):
         self.name = name
-    def chatbot(self, text):
-        return 'some response'
+
     def dadjoke(self):
         dadjoke()
+
+    def GoogleSearch(self, query):
+        GoogleSearch.GoogleSearch(query)
