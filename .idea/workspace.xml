@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="86be6db0-3a0f-437e-a3e1-19ca287cbfcd" name="Default Changelist" comment="idbwhjrekijwqded">
-      <change afterPath="$PROJECT_DIR$/feature_files/text_summarizer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pywhatkit_dbs.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/EVA-1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/EVA-1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="86be6db0-3a0f-437e-a3e1-19ca287cbfcd" name="Default Changelist" comment="HeyItsMe - 20:32 IST (UTC+5:30)&#10;changed folder structure for organization&#10;added requirements.txt&#10;added a text_summarizer.py&#10;updated app.py and features.py">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GoogleSearch.py" beforeDir="false" afterPath="$PROJECT_DIR$/feature_files/GoogleSearch.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dadjoke.py" beforeDir="false" afterPath="$PROJECT_DIR$/feature_files/dadjoke.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoogleSearch.py" beforeDir="false" afterPath="$PROJECT_DIR$/GoogleSearch.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature_files/GoogleSearch.py" beforeDir="false" afterPath="$PROJECT_DIR$/feature_files/WebSearch.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/features.py" beforeDir="false" afterPath="$PROJECT_DIR$/features.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/feature_files/speak_and_get_audio.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +22,7 @@
   <component name="Git.Settings">
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SIGN_OFF_COMMIT" value="true" />
   </component>
   <component name="GithubDefaultAccount">
     <option name="defaultAccountId" value="bb437bf2-b0a2-4ebc-a6f2-3f7fe2da10db" />
@@ -46,7 +40,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="diff.external" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -188,6 +182,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="idbwhjrekijwqded" />
-    <option name="LAST_COMMIT_MESSAGE" value="idbwhjrekijwqded" />
+    <MESSAGE value="HeyItsMe - 20:32 IST (UTC+5:30)&#10;changed folder structure for organization&#10;added requirements.txt&#10;added a text_summarizer.py&#10;updated app.py and features.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="HeyItsMe - 20:32 IST (UTC+5:30)&#10;changed folder structure for organization&#10;added requirements.txt&#10;added a text_summarizer.py&#10;updated app.py and features.py" />
   </component>
 </project>

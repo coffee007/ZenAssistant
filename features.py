@@ -1,5 +1,5 @@
 from feature_files.dadjoke import dadjoke
-from feature_files.GoogleSearch import GoogleSearch
+from feature_files.WebSearch import GoogleSearch
 from feature_files.text_summarizer import summary
 
 class Assistant():
