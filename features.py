@@ -21,11 +21,11 @@ class Assistant():
     def OpenApp(self,text):
         OpenAPP(text)
 
-    def GiveMeaning(self,query):
+    def GiveMeaning(self, query):
         GiveMeaning(query)
 
-    def GiveSynonym(self,query):
+    def GiveSynonym(self, query):
         GiveSynonym(query)
 
-    def GiveAntonym(self,query):
+    def GiveAntonym(self, query):
         GiveAntonym(query)
