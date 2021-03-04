@@ -20,4 +20,4 @@ def GiveAntonym(query):
     return antonym[0]
 
 
-print(GiveMeaning("morning"))
+
