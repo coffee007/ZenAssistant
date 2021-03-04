@@ -1,9 +1,11 @@
 from nltk.corpus import stopwords
 import nltk
+
 nltk.download("stopwords")
 from nltk.cluster.util import cosine_distance
 import numpy as np
 import networkx as nx
+
 
 def summary(text):
     def read_article(text):
@@ -16,7 +18,6 @@ def summary(text):
         sentences.pop()
 
         return sentences
-
 
     def sentence_similarity(sent1, sent2, stopwords=None):
         if stopwords is None:
@@ -44,7 +45,6 @@ def summary(text):
 
         return 1 - cosine_distance(vector1, vector2)
 
-
     def build_similarity_matrix(sentences, stop_words):
         # Create an empty similarity matrix
         similarity_matrix = np.zeros((len(sentences), len(sentences)))
@@ -56,7 +56,6 @@ def summary(text):
                 similarity_matrix[idx1][idx2] = sentence_similarity(sentences[idx1], sentences[idx2], stop_words)
 
         return similarity_matrix
-
 
     def generate_summary(file_name, top_n=5):
         stop_words = stopwords.words('english')

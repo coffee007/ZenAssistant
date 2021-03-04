@@ -22,4 +22,3 @@ def OpenAPP(name):
     O = find(str(name))
     os.startfile(str(O))
 
-OpenAPP("tlauncher")
