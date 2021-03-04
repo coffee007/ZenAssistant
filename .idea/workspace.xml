@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="86be6db0-3a0f-437e-a3e1-19ca287cbfcd" name="Default Changelist" comment="INFI&#10;&#10;5:33 pm&#10;Wednesday, 3 March 2021 (IST)&#10;&#10;changes - changes the name of some files(made the starting letter caps)&#10;&#10;added google search functionality">
-      <change afterPath="$PROJECT_DIR$/feature_files/OpenApps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/EVA-1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/EVA-1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feature_files/WebSearch.py" beforeDir="false" afterPath="$PROJECT_DIR$/feature_files/WebSearch.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features.py" beforeDir="false" afterPath="$PROJECT_DIR$/features.py" afterDir="false" />
-    </list>
+    <list default="true" id="86be6db0-3a0f-437e-a3e1-19ca287cbfcd" name="Default Changelist" comment="INFI&#10;Made file that searches and opens the app &#10;(dint make any other changes exept added the function to features.py)" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,9 +18,6 @@
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="SIGN_OFF_COMMIT" value="true" />
-  </component>
-  <component name="GithubDefaultAccount">
-    <option name="defaultAccountId" value="bb437bf2-b0a2-4ebc-a6f2-3f7fe2da10db" />
   </component>
   <component name="ProjectId" id="1pBZQmdrAvdFORAXumdFT0HaD1E" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -189,7 +179,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614692537094</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="INFI&#10;Made file that searches and opens the app &#10;(dint make any other changes exept added the function to features.py)">
+      <created>1614831685193</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1614831685193</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -208,6 +205,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="idbwhjrekijwqded" />
     <MESSAGE value="HeyItsMe - 20:32 IST (UTC+5:30)&#10;changed folder structure for organization&#10;added requirements.txt&#10;added a text_summarizer.py&#10;updated app.py and features.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="HeyItsMe - 20:32 IST (UTC+5:30)&#10;changed folder structure for organization&#10;added requirements.txt&#10;added a text_summarizer.py&#10;updated app.py and features.py" />
+    <MESSAGE value="INFI&#10;Made file that searches and opens the app &#10;(dint make any other changes exept added the function to features.py)" />
+    <option name="LAST_COMMIT_MESSAGE" value="INFI&#10;Made file that searches and opens the app &#10;(dint make any other changes exept added the function to features.py)" />
   </component>
 </project>
