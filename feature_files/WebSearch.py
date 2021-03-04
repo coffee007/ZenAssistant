@@ -1,6 +1,10 @@
 import pywhatkit
 
 
+
 def GoogleSearch(text):
-    pywhatkit.search(text)
+    result = pywhatkit.search(text)
+    return result
+
+
 
