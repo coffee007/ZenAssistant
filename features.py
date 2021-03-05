@@ -1,5 +1,5 @@
 from feature_files.dadjoke import dadjoke
-from feature_files.WebSearch import GoogleSearch
+from feature_files.WebSearch import googleSearch
 from feature_files.text_summarizer import summary
 from feature_files.OpenApps import OpenAPP
 from feature_files.Dictionary import GiveAntonym ,GiveSynonym,GiveMeaning
@@ -13,7 +13,7 @@ class Assistant():
         return dadjoke()
 
     def GoogleSearch(self, query):
-        return GoogleSearch(query)
+        return googleSearch(query)
 
     def summarize_text(self, text):
         return summary(text)
