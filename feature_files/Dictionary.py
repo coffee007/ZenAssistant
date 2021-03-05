@@ -15,7 +15,7 @@ def GiveMeaning(query):
 def GiveSynonym(query):
     try:
         synonym = PyDictionary.PyDictionary.synonym(str(query))
-        return synonym[0].capitzalize()
+        return synonym[0].capitalize()
     except:
         return "No synonyms found."
 
