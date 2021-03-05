@@ -1,14 +1,16 @@
 import os
 
-
 file_added = False
-
-if not file_added:
-    directory = os.path.join("C://", "ZEN")
-    os.mkdir(directory)
-    file_added = True
-else:
-    print("File added already")
+try:
+    if not file_added:
+        directory = os.path.join("C://", "ZEN")
+        os.mkdir(directory)
+        print("File added")
+        file_added = True
+    else:
+        print("File added already")
+except OSError as e:
+    print(e)
 
 
 # find the file that needs to be opened
@@ -19,7 +21,7 @@ def find(name):
         if str(name.lower() + ".lnk") in str(files).lower():
             path = str((root + "\\" + name + ".lnk"))
             print(path)
-        # else it does this
+            # else it does this
         else:
             error = ("File not found , make sure the shortcut is added to " + directory)
             print(error)
@@ -30,6 +32,10 @@ def find(name):
 
 def OpenAPP(name):
     app_to_be_opened = find(str(name))
-    os.startfile(str(app_to_be_opened))
+    try:
+        os.startfile(str(app_to_be_opened))
+    except Exception as e:
+        print("")
+
 
 

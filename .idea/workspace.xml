@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="86be6db0-3a0f-437e-a3e1-19ca287cbfcd" name="Default Changelist" comment="INFI&#10;made the Dictionary.py functions like giveMeaning() , antonym etc&#10;PS Summary shud be fixxed and .... @heyitsme add my Openapps() and Dictionary functions in app.py like how u did for ur summary and etc">
-      <change afterPath="$PROJECT_DIR$/feature_files/Weather.py" afterDir="false" />
+    <list default="true" id="86be6db0-3a0f-437e-a3e1-19ca287cbfcd" name="Default Changelist" comment="INFI&#10;made changes to OpenApps.py">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/feature_files/OpenApps.py" beforeDir="false" afterPath="$PROJECT_DIR$/feature_files/OpenApps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feature_files/WebSearch.py" beforeDir="false" afterPath="$PROJECT_DIR$/feature_files/WebSearch.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614846534748</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="INFI&#10;made changes to OpenApps.py">
+      <created>1614926731569</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1614926731569</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -235,6 +239,7 @@
     <MESSAGE value="INFI&#10;Made file that searches and opens the app &#10;(dint make any other changes exept added the function to features.py)" />
     <MESSAGE value="INFI&#10;just made the functio ignore the case sensitivity" />
     <MESSAGE value="INFI&#10;made the Dictionary.py functions like giveMeaning() , antonym etc&#10;PS Summary shud be fixxed and .... @heyitsme add my Openapps() and Dictionary functions in app.py like how u did for ur summary and etc" />
-    <option name="LAST_COMMIT_MESSAGE" value="INFI&#10;made the Dictionary.py functions like giveMeaning() , antonym etc&#10;PS Summary shud be fixxed and .... @heyitsme add my Openapps() and Dictionary functions in app.py like how u did for ur summary and etc" />
+    <MESSAGE value="INFI&#10;made changes to OpenApps.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="INFI&#10;made changes to OpenApps.py" />
   </component>
 </project>
