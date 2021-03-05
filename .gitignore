@@ -3,3 +3,4 @@
 /__pycache__/
 /.venv/
 /.cache
+/feature_files/__pycache__
