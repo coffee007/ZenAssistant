@@ -10,7 +10,7 @@ try:
     else:
         print("File added already")
 except OSError as e:
-    print(e)
+    print("Folder created:", e)
 
 
 # find the file that needs to be opened

@@ -1,0 +1,37 @@
+{
+  "commands": [
+    {"patterns": ["tell me a joke", "joke", "make me laugh"],
+      "commands": ["dadjoke"]
+    },
+    {"patterns": ["tell me a random fact", "random fact", "tell me something interesting"],
+      "commands": ["RandomFacts"]
+    },
+    {"patterns": ["search google for", "open google", "google"],
+      "commands": ["GoogleSearch"]
+    },
+    {"patterns": ["what is the weather", "tell me the weather", "weather", "what's the weather like"],
+      "commands": ["Weather"]
+    },
+    {"patterns": ["antonym of", "tell me what the antonym is"],
+      "commands": ["GiveAntonym"]
+    },
+    {"patterns": ["synonym of"],
+      "commands": ["GiveSynonym"]
+    },
+    {"patterns": ["meaning of", "what does this word mean"],
+      "commands": ["GiveMeaning"]
+    },
+    {"patterns": ["summarize text"],
+      "commands": ["summarize_text"]
+    },
+    {"patterns": ["open an app"],
+      "commands": ["OpenApp"]
+    },
+    {"patterns": [],
+      "commands": []
+    },
+    {"patterns": [],
+      "commands": []
+    }
+  ]
+}

@@ -3,5 +3,5 @@ import randfacts
 
 def RandomFacts():
     x = randfacts.getFact()
-    print(x)
+    return x
 

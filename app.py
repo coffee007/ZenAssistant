@@ -1,19 +1,21 @@
 from features import Assistant
+from feature_files.natural_language import talk
+import inspect
 
-bot = Assistant("Zen")
-
-joke = ["joke", "laugh", "funny"]
-name = ["name", "who are you"]
-google = ["google", "search"]
-summary = ["summary"]
+name = input("Enter bot's name: ")
+bot = Assistant(name)
 
 while True:
     text = input("Enter message: ").lower()
-    if any(word in joke for word in text.split()):
-        print(bot.dadjoke())
-    elif any(word in name for word in text.split()):
-        print("My name is {}".format(bot.name))
-    elif any(word in google for word in text.split()):
-        print(bot.GoogleSearch(text))
-    elif any(word in summary for word in text.split()):
-        print(bot.summarize_text(text))
+    x = talk(text)
+    if x[1] == "function":
+        a = inspect.getmembers(Assistant)
+        y = getattr(bot, x[0])
+        result = y()
+        if isinstance(result, dict):
+            parameter = input(result.get("error"))
+            print(y(parameter, False))
+        else:
+            print(result)
+    else:
+        print(x[0])
