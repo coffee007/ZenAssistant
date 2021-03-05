@@ -46,10 +46,28 @@ class SpotifyFeature:
         else:
             self.spotify_access.start_playback(uris=uris)
 
+    def get_devices(self):
+        devices = self.spotify_access.devices()["devices"]
+        if len(devices) == 0:
+            return {"Error": "No device running Spotify"}
+        else:
+            return {"string": "\n".join([str(i+1) + "-" + device["name"] for i, device in enumerate(devices)]), "devices": devices}
+
+    def change_playback_device(self, device_id):
+        self.spotify_access.transfer_playback(device_id)
+
 
 def test_feature(api_keys_path):
     spotify = SpotifyFeature(api_keys_path, True, "http://localhost:4321")
-    spotify.play_music([input("track uri: ")])
+    dev = spotify.get_devices()
+    print(dev["string"])
+    dev_n = input("Play on device N°")
+    try:
+        device = dev["devices"][int(dev_n)-1]
+    except:
+        print("Invalid input")
+        return {"Error": "Invalid input for device selection"}
+    spotify.change_playback_device(device["id"])
 
 
 if __name__ == "__main__":
