@@ -3,6 +3,7 @@ from feature_files.natural_language import talk
 import inspect
 
 name = input("Enter bot's name: ")
+
 bot = Assistant(name)
 
 while True:
