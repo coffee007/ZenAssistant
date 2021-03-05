@@ -3,7 +3,7 @@ import os
 file_added = False
 try:
     if not file_added:
-        directory = os.path.join("C://", "ZEN")
+        directory = os.path.join("userapps")
         os.mkdir(directory)
         print("File added")
         file_added = True
