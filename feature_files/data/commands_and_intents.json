@@ -4,13 +4,13 @@
       "commands": ["dadjoke"]
     },
     {"patterns": ["tell me a random fact", "random fact", "tell me something interesting"],
-      "commands": ["RandomFacts"]
+      "commands": ["random_facts"]
     },
     {"patterns": ["search google for", "open google", "google"],
-      "commands": ["GoogleSearch"]
+      "commands": ["google_search"]
     },
     {"patterns": ["what is the weather", "tell me the weather", "weather", "what's the weather like"],
-      "commands": ["Weather"]
+      "commands": ["weather"]
     },
     {"patterns": ["antonym of", "tell me what the antonym is", "what is the opposite of", "opposite word"],
       "commands": ["GiveAntonym"]
@@ -25,7 +25,7 @@
       "commands": ["summarize_text"]
     },
     {"patterns": ["open an app"],
-      "commands": ["OpenApp"]
+      "commands": ["open_app"]
     },
     {"patterns": ["who are you", "what is your name", "introduce yourself"],
       "commands": ["whoAmI"]
