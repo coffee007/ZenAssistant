@@ -30,11 +30,11 @@
     {"patterns": ["who are you", "what is your name", "introduce yourself"],
       "commands": ["whoAmI"]
     },
-    {"patterns": [],
-      "commands": []
+    {"patterns": ["Create a contact", "Remember this person", "New contact"],
+      "commands": ["create_contact"]
     },
-    {"patterns": [],
-      "commands": []
+    {"patterns": ["Delete a contact", "Delete contact"],
+      "commands": ["delete_contact"]
     },
     {"patterns": [],
       "commands": []

@@ -40,7 +40,7 @@ while True:
         result = y()
         if isinstance(result, dict):
             parameter = input(result.get("error"))
-            print(y(parameter, False))
+            print(y(parameter, reqs_confirm=False))
         else:
             print(result)
     else:
