@@ -36,8 +36,8 @@
     {"patterns": ["Delete a contact", "Delete contact"],
       "commands": ["delete_contact"]
     },
-    {"patterns": [],
-      "commands": []
+    {"patterns": ["Play music on spotify"],
+      "commands": ["play_music"]
     },
     {"patterns": [],
       "commands": []
