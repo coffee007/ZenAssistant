@@ -1,10 +1,10 @@
 from feature_files.dadjoke import dadjoke
-from feature_files.WebSearch import googleSearch
+from feature_files.web_search import googleSearch
 from feature_files.text_summarizer import summary
-from feature_files.OpenApps import OpenAPP
-from feature_files.Dictionary import GiveAntonym, GiveSynonym, GiveMeaning
-from feature_files.RandomFacts import RandomFacts
-from feature_files.Weather import Weather
+from feature_files.open_app import OpenApp
+from feature_files.dictionary import GiveAntonym, GiveSynonym, GiveMeaning
+from feature_files.random_facts import RandomFacts
+from feature_files.weather import Weather
 from feature_files.contact import Contact
 import json
 
@@ -19,7 +19,7 @@ class Assistant():
     def dadjoke(self, reqs_confirm=False):
         return dadjoke()
 
-    def GoogleSearch(self, query='', reqs_confirm=True):
+    def google_search(self, query='', reqs_confirm=True):
         if reqs_confirm:
             return dict({"error": "Please enter what you wish to search for: "})
         return googleSearch(query)
@@ -29,13 +29,13 @@ class Assistant():
             return dict({"error": "Please enter a paragraph you want to summarize. It should have more than 5 sentences. "})
         return summary(text)
 
-    def RandomFacts(self, reqs_confirm=False):
+    def random_facts(self, reqs_confirm=False):
         return RandomFacts()
 
-    def OpenApp(self, text='', reqs_confirm=True):
+    def open_app(self, text='', reqs_confirm=True):
         if reqs_confirm:
             return dict({"error": "Which app do you want to open? "})
-        OpenAPP(text)
+        OpenApp(text)
         return "App opened"
 
     def GiveMeaning(self, query='', reqs_confirm=True):
@@ -53,7 +53,7 @@ class Assistant():
             return dict({"error": "Which word's antonyms should I tell you? "})
         return GiveAntonym(query)
 
-    def Weather(self, reqs_confirm=False):
+    def weather(self, reqs_confirm=False):
         Weather()
         return "Showing weather"
 
@@ -63,10 +63,12 @@ class Assistant():
         with open("feature_files/data/user_contacts.json", "r") as readfile:
             read = dict(json.load(readfile))
             readfile.close()
-        new_contact = Contact(firstname.lower(), lastname.lower(), phone_nums, emails)
+        new_contact = Contact(
+            firstname.lower(), lastname.lower(), phone_nums, emails)
         if firstname in read.keys():
             return "This contact already exists"
-        read.update({new_contact.firstname:[new_contact.lastname, new_contact.phone, new_contact.email]})
+        read.update({new_contact.firstname: [
+                    new_contact.lastname, new_contact.phone, new_contact.email]})
         x = open("feature_files/data/user_contacts.json", "w")
         json.dump(read, x)
         x.close()
@@ -88,4 +90,3 @@ class Assistant():
             return "That contact doesn't exist."
 
         # ADD EDIT CONTACT FEATURE AFTER GUI COMPLETED
-
