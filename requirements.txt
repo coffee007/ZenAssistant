@@ -13,3 +13,6 @@ bs4~=0.0.1
 randfacts~=0.2.11
 fuzzywuzzy~=0.18.0
 spotipy>=2.17.1
+
+django-googlesearch~=0.2
+selenium~=3.141.0
