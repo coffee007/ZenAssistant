@@ -23,19 +23,17 @@ def find(name):
             print(path)
             # else it does this
         else:
-            error = ("File not found , make sure the shortcut is added to " + directory)
+            error = (
+                "File not found , make sure the shortcut is added to " + directory)
             print(error)
             path = None
 
         return path
 
 
-def OpenAPP(name):
+def OpenApp(name):
     app_to_be_opened = find(str(name))
     try:
         os.startfile(str(app_to_be_opened))
     except Exception as e:
         print("")
-
-
-
