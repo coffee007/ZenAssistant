@@ -11,6 +11,9 @@ class Assistant():
     def __init__(self, name):
         self.name = name
 
+    def whoAmI(self):
+        return "Hello, I am {}, your virtual assistant. Say 'What can you do?' to learn more about commands".format(self.name)
+
     def dadjoke(self, reqs_confirm=False):
         return dadjoke()
 

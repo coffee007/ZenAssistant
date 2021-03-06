@@ -2,6 +2,5 @@ import pywhatkit
 
 
 def googleSearch(query):
-    return pywhatkit.search(query)
-
-
+    pywhatkit.search(query)
+    return "Searching."

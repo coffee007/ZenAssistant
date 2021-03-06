@@ -12,13 +12,13 @@
     {"patterns": ["what is the weather", "tell me the weather", "weather", "what's the weather like"],
       "commands": ["Weather"]
     },
-    {"patterns": ["antonym of", "tell me what the antonym is"],
+    {"patterns": ["antonym of", "tell me what the antonym is", "what is the opposite of", "opposite word"],
       "commands": ["GiveAntonym"]
     },
-    {"patterns": ["synonym of"],
+    {"patterns": ["synonym of", "tell me what the antonym of ", "what means the same as", "similar word"],
       "commands": ["GiveSynonym"]
     },
-    {"patterns": ["meaning of", "what does this word mean"],
+    {"patterns": ["meaning of", "what does this word mean", "what does the word"],
       "commands": ["GiveMeaning"]
     },
     {"patterns": ["summarize text"],
@@ -26,6 +26,18 @@
     },
     {"patterns": ["open an app"],
       "commands": ["OpenApp"]
+    },
+    {"patterns": ["who are you", "what is your name", "introduce yourself"],
+      "commands": ["whoAmI"]
+    },
+    {"patterns": [],
+      "commands": []
+    },
+    {"patterns": [],
+      "commands": []
+    },
+    {"patterns": [],
+      "commands": []
     },
     {"patterns": [],
       "commands": []
