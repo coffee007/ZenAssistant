@@ -28,3 +28,4 @@ def GiveAntonym(query):
     except:
         return "No antonym found."
 
+
