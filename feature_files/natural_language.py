@@ -14,7 +14,7 @@ def talk(text, chat_history = ''):
     for command in commands:
         command = dict(command)
         for j in list(command.get("patterns")):
-            n = fuzz.partial_ratio(text, j)
+            n = fuzz.ratio(text, j)
             if n > max_match.get("match"):
                 max_match["match"] = n
                 max_match["intent"] = list(command.get("commands"))[0]
@@ -24,7 +24,7 @@ def talk(text, chat_history = ''):
     for intent in intents:
         intent = dict(intent)
         for i in list(intent.get("patterns")):
-            m = fuzz.partial_ratio(text, i)
+            m = fuzz.ratio(text, i)
             if m > max_match.get("match"):
                 max_match["match"] = m
                 max_match["intent"] = random.choice(list(intent.get("responses")))

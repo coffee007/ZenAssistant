@@ -30,20 +30,26 @@
     {"patterns": ["who are you", "what is your name", "introduce yourself"],
       "commands": ["whoAmI"]
     },
-    {"patterns": ["Create a contact", "Remember this person", "New contact"],
+    {"patterns": ["Create a contact", "Remember this person"],
       "commands": ["create_contact"]
     },
-    {"patterns": ["Delete a contact", "Delete contact"],
+    {"patterns": ["Delete a contact", "Delete this contact"],
       "commands": ["delete_contact"]
     },
     {"patterns": ["Play music on spotify"],
       "commands": ["play_music"]
     },
-    {"patterns": [],
-      "commands": []
+    {"patterns": ["all my contacts", "show me all contacts", "who are my contacts"],
+      "commands": ["show_all_contacts"]
     },
-    {"patterns": [],
-      "commands": []
+    {"patterns": ["show me the contact of", "is in my contacts list"],
+      "commands": ["show_one_of_my_contacts"]
+    },
+    {"patterns": ["show phone numbers of"],
+      "commands": ["show_phones"]
+    },
+    {"patterns": ["show emails of"],
+      "commands": ["show_emails"]
     }
   ]
 }

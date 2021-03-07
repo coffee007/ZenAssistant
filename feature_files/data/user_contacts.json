@@ -1,1 +1,17 @@
-{"test": ["", [12345], ["testemail"]]}
+{
+    "hello": {
+        "lastname": "hi",
+        "phone": [
+            "0293847",
+            "20938476"
+        ],
+        "email": [
+            "102983746"
+        ]
+    },
+    "test": {
+        "lastname": "",
+        "phone": [],
+        "email": []
+    }
+}
