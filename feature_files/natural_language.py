@@ -10,7 +10,7 @@ commands = list(dict(json.load(file2)).get("commands"))
 
 def talk(text, chat_history = ''):
     text = text.lower()
-    max_match = {"intent": "Sorry, I didn't get that.", "match": 0}
+    max_match = {"intent": "Sorry, I didn't get that.", "match": 50}
     for command in commands:
         command = dict(command)
         for j in list(command.get("patterns")):
@@ -20,7 +20,7 @@ def talk(text, chat_history = ''):
                 max_match["intent"] = list(command.get("commands"))[0]
     if max_match["match"] > 80:
         return [max_match.get("intent"), "function"]
-    max_match = {"intent": "Sorry, I didn't get that.", "match": 0}
+    max_match = {"intent": "Sorry, I didn't get that.", "match": 50}
     for intent in intents:
         intent = dict(intent)
         for i in list(intent.get("patterns")):
