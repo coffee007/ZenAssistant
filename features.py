@@ -87,5 +87,5 @@ class Assistant():
         else:
             return "That contact doesn't exist."
 
-        # ADD EDIT CONTACT FEATURE AFTER GUI COMPLETED
+        # ADD THE EDIT CONTACT FEATURE AFTER GUI COMPLETED
 
