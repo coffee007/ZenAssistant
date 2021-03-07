@@ -4,7 +4,7 @@ from feature_files.text_summarizer import summary
 from feature_files.open_app import OpenApp
 from feature_files.dictionary import GiveAntonym, GiveSynonym, GiveMeaning
 from feature_files.random_facts import RandomFacts
-from feature_files.weather import Weather
+from feature_files.Weather import Weather
 from feature_files.contact import Contact
 import json
 
