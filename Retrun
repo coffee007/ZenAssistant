@@ -1,0 +1,49 @@
+[1mdiff --git a/feature_files/data/commands_and_intents.json b/feature_files/data/commands_and_intents.json[m
+[1mindex 32c6ace..25352ee 100644[m
+[1m--- a/feature_files/data/commands_and_intents.json[m
+[1m+++ b/feature_files/data/commands_and_intents.json[m
+[36m@@ -47,6 +47,10 @@[m
+     },[m
+     {"patterns": ["show emails of"],[m
+       "commands": ["show_emails"][m
+[32m+[m[32m    },[m
+[32m+[m[32m    {"patterns" : ["give quote" , "quote" ],[m
+[32m+[m[32m    "commands" :  ["give_quote"][m
+     }[m
+[32m+[m
+   ][m
+ }[m
+\ No newline at end of file[m
+[1mdiff --git a/feature_files/quotes.py b/feature_files/quotes.py[m
+[1mindex e69de29..c8245ea 100644[m
+[1m--- a/feature_files/quotes.py[m
+[1m+++ b/feature_files/quotes.py[m
+[36m@@ -0,0 +1,15 @@[m
+[32m+[m[32mfrom quoters import Quote[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef give_quote(type):[m
+[32m+[m[32m    global quote[m
+[32m+[m[32m    if type == "normal":[m
+[32m+[m[32m        quote = Quote.print()[m
+[32m+[m[32m    if type == "anime":[m
+[32m+[m[32m        quote = Quote.print_anime_quote()[m
+[32m+[m
+[32m+[m[32m    return quote[m
+[32m+[m
+[32m+[m
+[32m+[m[32mif __name__ == '__main__':[m
+[32m+[m[32m    print(give_quote("anime"))[m
+[1mdiff --git a/requirements.txt b/requirements.txt[m
+[1mindex 2b9ba5c..c6b6809 100644[m
+[1m--- a/requirements.txt[m
+[1m+++ b/requirements.txt[m
+[36m@@ -15,4 +15,5 @@[m [mfuzzywuzzy~=0.18.0[m
+ spotipy>=2.17.1[m
+ django-googlesearch~=0.2[m
+ selenium~=3.141.0[m
+[31m-wolframalpha>=5.0.0[m
+\ No newline at end of file[m
+[32m+[m[32mwolframalpha>=5.0.0[m
+[32m+[m[32mquoters~=0.18[m
+\ No newline at end of file[m
