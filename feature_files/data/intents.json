@@ -4,7 +4,7 @@
          "responses": ["Hello, thanks for asking", "Good to see you again", "Hi there, how can I help?"]
         },
         {
-         "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
+         "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time", "gtg"],
          "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."]
         },
         {"tag": "thanks",
