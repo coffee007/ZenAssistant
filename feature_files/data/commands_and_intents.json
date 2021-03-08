@@ -47,6 +47,10 @@
     },
     {"patterns": ["show emails of"],
       "commands": ["show_emails"]
+    },
+    {"patterns" : ["give quote" , "quote" ],
+    "commands" :  ["give_quote"]
     }
+
   ]
 }
