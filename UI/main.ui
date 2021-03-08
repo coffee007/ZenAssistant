@@ -6,61 +6,134 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>1143</width>
+    <height>623</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:#2d2d2d;</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="submit">
     <property name="geometry">
      <rect>
-      <x>470</x>
-      <y>130</y>
+      <x>710</x>
+      <y>110</y>
       <width>71</width>
-      <height>41</height>
+      <height>51</height>
      </rect>
     </property>
-    <property name="text">
-     <string>send</string>
-    </property>
-   </widget>
-   <widget class="QTextEdit" name="textEdit">
-    <property name="geometry">
-     <rect>
-      <x>150</x>
-      <y>130</y>
-      <width>311</width>
-      <height>41</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_2">
-    <property name="geometry">
-     <rect>
-      <x>570</x>
-      <y>130</y>
-      <width>81</width>
-      <height>41</height>
-     </rect>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="autoFillBackground">
      <bool>false</bool>
     </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius:10px; background-color:white; border: 2.5px solid black;</string>
+    </property>
     <property name="text">
-     <string>MIC</string>
+     <string>Send!</string>
+    </property>
+    <property name="shortcut">
+     <string>Return</string>
     </property>
    </widget>
-   <widget class="QPlainTextEdit" name="plainTextEdit">
+   <widget class="QTextEdit" name="textinput">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>190</y>
-      <width>501</width>
-      <height>321</height>
+      <x>380</x>
+      <y>110</y>
+      <width>311</width>
+      <height>51</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Georgia</family>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:#f2f2f2; color:black; padding:5px; border-radius:10px;border:2.5px solid black;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="voiceinput">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>910</x>
+      <y>110</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius:10px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>assets/microphone_icon.jpg</normaloff>assets/microphone_icon.jpg</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
+    </property>
+    <property name="shortcut">
+     <string>Shift+V</string>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
+    <property name="autoRepeatInterval">
+     <number>101</number>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_toggle">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>PushButton</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="chatrec">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>200</y>
+      <width>591</width>
+      <height>381</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:#f2f2f2; color:black;padding:8px; border: 2.5px solid black; border-radius:10px;</string>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+    <property name="overwriteMode">
+     <bool>true</bool>
     </property>
    </widget>
   </widget>

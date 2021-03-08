@@ -6,7 +6,10 @@ def speak(text):
     engine = pyttsx3.init()
     engine.say(text)
     engine.setProperty("rate", 150)
-    engine.runAndWait()
+    try:
+        engine.runAndWait()
+    except:
+        engine.runAndWait()
 
 
 def get_audio():

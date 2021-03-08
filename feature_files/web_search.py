@@ -6,6 +6,7 @@ def googleSearch(query):
         pywhatkit.search(query)
     except Exception as e:
         print(e)
+    return "Searching Google"
 
 def YoutubeSearch(query):
     try:
