@@ -6,7 +6,7 @@
     {"patterns": ["tell me a random fact", "random fact", "tell me something interesting"],
       "commands": ["random_facts"]
     },
-    {"patterns": ["search google for", "open google", "google"],
+    {"patterns": ["search google for", "open google", "google" , "google search"],
       "commands": ["google_search"]
     },
     {"patterns": ["what is the weather", "tell me the weather", "weather", "what's the weather like"],
@@ -24,7 +24,7 @@
     {"patterns": ["summarize text"],
       "commands": ["summarize_text"]
     },
-    {"patterns": ["open an app"],
+    {"patterns": ["open an app" , "open"  , "open app"],
       "commands": ["open_app"]
     },
     {"patterns": ["who are you", "what is your name", "introduce yourself"],
@@ -36,10 +36,7 @@
     {"patterns": ["Delete a contact", "Delete this contact"],
       "commands": ["delete_contact"]
     },
-    {"patterns": ["Play music on spotify"],
-      "commands": ["play_music"]
-    },
-    {"patterns": ["all my contacts", "show me all contacts", "who are my contacts"],
+    {"patterns": ["all my contacts", "show me all contacts", "who are my contacts" , "contacts"],
       "commands": ["show_all_contacts"]
     },
     {"patterns": ["show me the contact of", "is in my contacts list"],

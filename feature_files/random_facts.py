@@ -2,6 +2,12 @@ import randfacts
 
 
 def RandomFacts():
-    x = randfacts.getFact()
-    return x
+    try:
+        x = randfacts.getFact()
+        return x
+    except Exception as e:
+        print(e)
+        return e
+        
+    
 

@@ -3,6 +3,7 @@ from feature_files.natural_language import talk
 import json
 import inspect
 
+
 try:
     with open("feature_files/data/userdata.json", "r+") as d:
         data = dict(json.load(d))
