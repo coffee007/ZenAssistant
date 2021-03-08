@@ -8,7 +8,8 @@ try:
         print("File added")
         file_added = True
     else:
-        print("File added already")
+        x = "File added already"
+        print(x)
 except OSError as e:
     print("Folder created:", e)
 
