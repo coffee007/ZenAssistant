@@ -3,7 +3,6 @@ import re
 import win32api
 
 
-
 def find_file(root_folder, rex):
     found = False
     for root, dirs, files in os.walk(root_folder):
@@ -11,10 +10,10 @@ def find_file(root_folder, rex):
             result = rex.search(f)
             if not found:
                 output = "file not found"
-                if result:
-                    print(str(os.path.join(root, f)))
-                    return os.path.join(root, f)
+                if result and f.endswith(".exe"):
+                    path = str(os.path.join(root, f))
                     found = True
+                    return path
 
 
 def find_file_in_all_drives(file_name):
@@ -26,15 +25,21 @@ def find_file_in_all_drives(file_name):
     return a
 
 
+failure = False
+
+
 def openApp(app_name):
+    global failure
     try:
         os.startfile(str(find_file_in_all_drives(str(app_name))))
         result = "succesfull"
-        print (result)
+        print(result)
     except OSError as e:
         result = "failed,cannot find the app on ur device"
-        print(e,result)
+        print(e, result)
+        failure = True
         return result
 
+
 if __name__ == "__main__":
-    openApp("Spotify") # <- app name goes here, this is an example
+    openApp("steam")  # <- app name goes here, this is an example
