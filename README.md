@@ -1,2 +1,2 @@
 # ZenAssistant
-Virtual Assistant
+Virtual Assistant in Python
